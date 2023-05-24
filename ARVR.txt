@@ -1,0 +1,58 @@
+#Transformation 
+
+using System.Collection;
+using System.Collection.Generic;
+using UnityEngine;
+
+public class TransformObject:MonoBehaviour{
+
+    void Start(){
+        transform.postion = new Vector3(1,0,0);
+    }
+
+    void Update(){
+        transform.postion = transform.postion + new Vector3(0.01f,0,0);
+        transform.localScale = transform.localScale + new Vector3(0.01f,0,0);
+    }
+}
+
+
+#Change Color/Material on button click
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ChangeColor : MonoBehaviour
+{
+    public Renderer sphereRenderer;
+    public GameObject sphere;
+
+    [SerializeField] private Color newColor;
+    [SerializeField] private Color[] colors;
+    private int colorValue;
+    // Start is called before the first frame update
+    void Start()
+    {
+        sphereRenderer = sphere.GetComponent<Renderer>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    public void ChangeMaterial()
+    {
+        newColor = Random.ColorHSV();
+
+        sphereRenderer.material.color = newColor;
+
+    }
+}
+
+
+#Vuforia - Marker Based AR App
+
+https://youtu.be/wOMB7DG0CT4
