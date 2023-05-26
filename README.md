@@ -1,2 +1,2 @@
 # LP2
-AI and ARVR - Lap codes
+SPPU TE Comp AI and ARVR - Lap Assignments(Codes)
